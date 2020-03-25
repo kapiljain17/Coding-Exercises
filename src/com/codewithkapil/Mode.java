@@ -23,16 +23,19 @@ public class Mode {
         for(int i=0; i<inputArray.length;i++){
 
 
-                if(collectMap.containsKey(inputArray[i]))
-                {
+             //   if(collectMap.containsKey(inputArray[i]))
+               // {
 
-                    count = collectMap.get(inputArray[i]) + 1 ;
-                    collectMap.put(inputArray[i],count);
-                }
-                else{
-                    count=1;
-                    collectMap.put(inputArray[i],count);
-                }
+                 //   count = collectMap.get(inputArray[i]) + 1 ;
+                   // collectMap.put(inputArray[i],count);
+               // }
+                //else{
+                  //  count=1;
+                   // collectMap.put(inputArray[i],count);
+                //}
+            
+            collectMap.put( inputArray[i] ,collectMap.getOrDefault(inputArray[i],0)+1);
+            
         }
         //find max value in map
         int maxValueInCollectMap=(Collections.max(collectMap.values()));
