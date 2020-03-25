@@ -19,10 +19,10 @@ public class Mode {
         //using map to get no of time array elements is repeated
 
         Map<Integer,Integer> collectMap = new HashMap<>();
-        int count=1;
-        for(int i=0; i<inputArray.length;i++){
+       // int count=1;
+        for(int i:inputArray){
 
-
+                //old way of doing
              //   if(collectMap.containsKey(inputArray[i]))
                // {
 
@@ -33,8 +33,8 @@ public class Mode {
                   //  count=1;
                    // collectMap.put(inputArray[i],count);
                 //}
-            
-            collectMap.put( inputArray[i] ,collectMap.getOrDefault(inputArray[i],0)+1);
+            //new way of doing it using map.getOrDefault.
+            collectMap.put( i ,collectMap.getOrDefault(i,0)+1);
             
         }
         //find max value in map
